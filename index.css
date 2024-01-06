@@ -16,6 +16,7 @@ body button {
   outline: 0;
   border-radius: 6px;
   padding: 10px;
+  cursor: pointer;
 }
 /* header */
 header {
@@ -35,6 +36,9 @@ header section {
   transform: translate(-50%, 50%);
   box-shadow: var(--fade) 0 0 11px 6px;
   border-radius: 6px;
+}
+header section p {
+  margin: 0;
   font-size: 22px;
 }
 header section span:first-of-type {
@@ -222,5 +226,33 @@ body > button {
   }
   main > article > div {
     order: 0 !important;
+  }
+}
+@media (max-width: 750px) {
+  header section {
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  header section p {
+    font-size: 15px;
+  }
+  header section button {
+    width: 100%;
+  }
+  header section > p > span {
+    font-size: 15px !important;
+    margin: 0 !important;
+  }
+  main > h1 {
+    font-size: 26px;
+  }
+  body > button {
+    padding: 10px;
+    top: 160px;
+    right: -26px;
+    font-size: 15px;
+    position: fixed;
   }
 }
