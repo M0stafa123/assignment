@@ -42,9 +42,11 @@ header section span:first-of-type {
   color: var(--main-color);
   font-weight: bold;
   font-size: 25px;
+  margin: 0 2px;
 }
 header section span:last-of-type {
-  height: 10px;
+  color: #c1c1c1;
+  margin: 0 2px;
 }
 header section button {
   margin-left: auto;
@@ -67,6 +69,7 @@ main > p {
   max-width: 850px;
   margin: auto;
   line-height: 1.8;
+  padding: 15px;
 }
 main > article {
   display: flex;
@@ -196,6 +199,9 @@ main > article > div::before {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+article div:last-of-type::before {
+  display: none;
+}
 /* end main */
 body > button {
   position: absolute;
@@ -205,4 +211,17 @@ body > button {
   padding: 10px 20px;
   font-size: 18px;
   border-radius: 6px 6px 0 0;
+}
+@media (max-width: 1600px) {
+  main article > div::before,
+  main article > div::before {
+    display: none;
+  }
+  main article > div::after,
+  main article > div::after {
+    display: none;
+  }
+  main > article > div {
+    order: 0 !important;
+  }
 }
